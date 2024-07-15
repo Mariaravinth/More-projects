@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="name">Car</label>
+    <input name="car" type="text" id="car" placeholder="name of the car" />
+    <br>
+    <label for="number">Year</label>
+    <input name="number" type="number" id="year" placeholder="Year" pattern="[0-9]*" />
+    <br>
+    <button onclick="age()">Enter</button>
+    <script>
+        function age() {
+            var car = document.getElementById("car").value;
+            var year = document.getElementById("year").value;
+            console.log(car);
+            console.log(year);
+        }
+        class Car {
+            constructor(car, year) {
+                this.car = car;
+                this.year = year;
+            }
+            age() {
+                const date = new Date();
+                return date.getFullYear() - this.year;
+            }
+        }
+        const myCar = new Car(car, year);
+        console.log(car);
+            console.log(year);
+        console.log(myCar.age());
+    </script>
+</body>
+
+</html>

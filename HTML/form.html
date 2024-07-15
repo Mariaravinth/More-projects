@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML FORM</title>
+  </head>
+  <body>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background-image: url(./tree5.jpg);
+        background-size: cover;
+      }
+      .container {
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        margin-top: 100px;       
+        background-image: url(./color1.webp);
+        background-attachment: scroll;
+        text-align: center;
+      }
+      .form-elements {
+        padding: 15px;
+      }
+    .img{
+      background-image: url(./lion.jpg);
+        background-size:cover;
+       background-blend-mode:normal;
+    }
+    span{
+      color: aqua;
+    }
+    .btn{
+      box-shadow: white;
+      border-radius:2px;
+    }
+    </style>
+    <div class="container">
+      <fieldset class="img">       
+        <legend><span>JOB APPLICATION</span></legend>
+        <form action="#">
+          <div class="form-elements">
+            <label for="fname"><span>First name:</span></label>
+            <input name="fname" type="text" id="fname" placeholder="fname" />
+          </div>
+          <div class="form-elements">
+            <label for="lname"><span>Last name:</span></label>
+            <input name="lname" type="text" id="lname" placeholder="lname" />
+          </div>
+          <div class="form-elements">
+            <label for="email"><span>Email id:</span></label>
+            <input
+              name="email"
+              type="email"
+              id="email"
+              placeholder="email"
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+            />
+          </div>
+          <div class="form-elements">
+            <label for="password"><span>Password</span></label>
+            <input
+              name="password"
+              type="password"
+              id="password"
+              placeholder="password"
+              pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+            />
+          </div>
+
+          <div class="form-elements">
+            <label for="phone"><span>Phone no.:</span></label>
+            <input
+              name="phone"
+              type="tel"
+              id="phone"
+              placeholder="phone"
+              pattern="[789][0-9]{9}"
+            />
+          </div>
+          <div class="form-elements">
+            <label for="male"><span>Male</span></label>
+            <input type="radio" name="gender" value="gender" />
+            <label for="female"><span>Female</span></label>
+            <input type="radio" name="gender" value="gender" />
+          </div>
+          <div class="form-elements">
+            <label for="married"><span>Married</span></label>
+            <input type="radio" name="status" value="relationship" />
+            <label for="single"><span>Single</span></label>
+            <input type="radio" name="status" value="relationship" />
+          </div>
+          <div class="form-elements">
+            <button type="submit" class="btn">Submit</button>
+          </div>
+        </form>
+      </fieldset>
+    </div>
+  </body>
+</html>
